@@ -59,7 +59,7 @@ export const PayPalButtonWrapper = ({
         <div className="w-full relative z-10">
           <PayPalScriptProvider
             options={{
-              clientId: 'test', // PayPal test client ID
+              clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || 'test',
               currency: 'USD',
               intent: 'capture',
             }}
